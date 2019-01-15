@@ -11,6 +11,7 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
 def start_bot(bot, update):
     my_text = "Hello {}! I'm a simple bot and I understand {} command only".\
         format(update.message.chat.first_name, '/start')
+    logging.info('User {} pressed /start'.format(update.message.chat.username))
     update.message.reply_text(my_text)
 
 
