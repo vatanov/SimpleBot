@@ -116,3 +116,5 @@ dmypy.json
 .idea
 workspace.xml
 vcs.xml
+
+settings.py
