@@ -63,7 +63,7 @@ def planet(bot, update):
 
     pln_position = ephem.constellation(pln)
     my_text = "{} position {}".format(selected_planet, pln_position)
-    update.message.reply_text (my_text)
+    update.message.reply_text(my_text)
 
 
 def main():
@@ -72,14 +72,14 @@ def main():
     updtr.dispatcher.add_handler(CommandHandler('start', start_bot))
     updtr.dispatcher.add_handler(MessageHandler(Filters.text, chat))
     updtr.dispatcher.add_handler(CommandHandler('choose_planet', choose_planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Mars', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Venus', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Earth', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Mercury', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Jupiter', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Saturn', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Uranus', planet))
-    updtr.dispatcher.add_handler (CommandHandler ('Neptune', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Mars', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Venus', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Earth', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Mercury', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Jupiter', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Saturn', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Uranus', planet))
+    updtr.dispatcher.add_handler(CommandHandler('Neptune', planet))
 
     updtr.start_polling()
     updtr.idle()
